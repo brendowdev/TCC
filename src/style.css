@@ -1,0 +1,379 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: url('./imagens/WhatsApp\ Image\ 2024-11-24\ at\ 20.52.16.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  line-height: 1.6;
+}
+
+/* Cabeçalho */
+.cabecalho {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #1c1c1c; /* Fundo preto */
+  color: #ffffff; /* Texto branco */
+  padding: 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.cabecalho img {
+  border-radius: 50%;
+  margin-right: 15px;
+  border: 2px solid #ffffff; /* Borda branca */
+}
+
+.cabecalho h1 {
+  font-size: 24px;
+  font-weight: bold;
+}
+
+/* Seção do Formulário */
+.registro {
+  padding: 20px;
+  background: linear-gradient(145deg, #2196F3, #0D47A1); /* Fundo gradiente em tons de azul */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 400px;
+  margin: 120px auto;
+}
+
+.registro h2 {
+  text-align: center;
+  color: #ffffff; /* Texto branco */
+  margin-bottom: 20px;
+}
+
+#formulario {
+  display: flex;
+  flex-direction: column;
+}
+
+#formulario label {
+  margin-bottom: 8px;
+  font-weight: bold;
+  color: #ffffff; /* Texto branco */
+}
+
+#formulario input[type="text"],
+#formulario input[type="number"],
+#formulario select {
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  transition: border-color 0.3s ease;
+}
+
+#formulario input:focus,
+#formulario select:focus {
+  border-color: #0D47A1; /* Azul escuro para foco */
+  outline: none;
+}
+
+#formulario button[type="submit"] {
+  padding: 12px 20px;
+  background-color: #0D47A1; /* Azul escuro */
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#formulario button[type="submit"]:hover {
+  background-color: #1565c0; 
+}
+
+.horas-jogadas {
+  padding: 20px; 
+  background-color: #ffffff; 
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 700px; 
+  margin: 40px auto; 
+  overflow-x: auto; 
+}
+
+.horas-jogadas h2 {
+  text-align: center;
+  color: #1c1c1c; 
+  margin-bottom: 10px; 
+}
+
+
+#horas-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  background-color: rgba(255, 255, 255, 0.9); 
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#horas-tabela thead th {
+  background-color: #0d47a1; 
+  color: white;
+  padding: 10px;
+  font-size: 16px;
+}
+
+#horas-tabela tbody tr {
+  background-color: #ffffff; 
+  transition: background-color 0.3s ease;
+}
+
+#horas-tabela tbody tr:hover {
+  background-color: #f1f1f1; 
+}
+
+#horas-tabela tbody td {
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+#horas-tabela tbody td img {
+  width: 60px;
+  height: 60px;
+  object-fit: cover;
+  border-radius: 50%;
+  display: block;
+  margin: auto;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  #horas-tabela thead {
+    display: none;
+  }
+
+  #horas-tabela tbody tr {
+    display: block;
+    margin-bottom: 20px;
+  }
+
+  #horas-tabela tbody td {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 5px;
+    border-bottom: none;
+  }
+
+  #horas-tabela tbody td:before {
+    content: attr(data-label);
+    font-weight: bold;
+    color: #333;
+  }
+
+  #horas-tabela tbody td img {
+    margin-right: 10px;
+  }
+}
+
+.jogos-registrados {
+  padding: 20px;
+  background: linear-gradient(145deg, #1E2A47, #0D47A1); 
+  border-radius: 12px;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  max-width: 650px;
+  margin: 70px auto;
+  border: 2px solid #0D47A1; 
+}
+
+.jogos-registrados h2 {
+  text-align: center;
+  color: #ffffff; 
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 25px;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.1);
+}
+
+#jogos-tabela {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: rgba(255, 255, 255, 0.9); 
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+#jogos-tabela th {
+  background-color: #0d47a1; 
+  color: white;
+  font-size: 16px;
+  padding: 10px;
+  text-align: left;
+}
+
+#jogos-tabela td {
+  border: 1px solid #ddd;
+  padding: 10px;
+  text-align: left;
+}
+
+#jogos-tabela tr:nth-child(even) {
+  background-color: #f1f1f1; 
+}
+
+#jogos-tabela tr:nth-child(odd) {
+  background-color: #ffffff; 
+}
+
+.rodape {
+  background-color: #0D47A1; 
+  color: #fff; 
+  padding: 20px 0;
+  text-align: center;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+}
+
+.rodape .container {
+  max-width: 1200px; 
+  margin: 0 auto; 
+  padding: 0 20px;
+}
+
+.rodape p {
+  margin: 0;
+  font-size: 16px; 
+  line-height: 1.5; 
+}
+
+.redes-sociais {
+  margin-top: 10px;
+}
+
+.redes-sociais a {
+  margin: 0 15px; 
+  text-decoration: none;
+}
+
+.redes-sociais img {
+  width: 30px; 
+  height: 30px;
+  transition: transform 0.3s ease;
+}
+
+.redes-sociais a:hover img {
+  transform: scale(1.2); 
+}
+
+@media (max-width: 600px) {
+  .rodape p {
+    font-size: 14px; 
+  }
+
+  .redes-sociais img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .redes-sociais {
+    margin-top: 15px;
+  }
+
+  .redes-sociais a {
+    margin: 0 10px;
+  }
+}
+
+.feedback {
+  max-width: 600px;
+  margin: 20px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+  font-size: 28px;
+  font-weight: bold;
+  color: #333;
+  text-align: center;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: 'Arial', sans-serif;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.feedback-form li {
+  margin-bottom: 20px;
+}
+
+label {
+  font-size: 16px;
+  margin-bottom: 10px;
+  display: block;
+  color: #333;
+}
+
+.estrelas {
+  display: flex;
+}
+
+.estrelas .estrela {
+  cursor: pointer;
+  font-size: 30px;
+  color: #ccc; 
+}
+
+.estrelas .estrela.selected {
+  color: #ffcc00; 
+}
+
+.resultado-feedback {
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  font-size: 16px;
+  text-align: center;
+}
+
+.resultado-feedback.success {
+  color: #28a745;
+  border: 1px solid #28a745;
+}
+
+.resultado-feedback.error {
+  color: #dc3545;
+  border: 1px solid #dc3545;
+}
+
+button {
+  width: 100%;
+  padding: 12px;
+  background-color: #0D47A1;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 20px;
+}
+
+button:hover {
+  background-color: #1565c0;
+}

@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Playstation Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="cabecalho">
+      <img
+        src="./imagens/WhatsApp Image 2024-11-24 at 21.20.09.jpeg"
+        alt="Logo Game Tracker"
+        width="100"
+      />
+      <h1>Game Tracker</h1>
+    </header>
+
+    <section class="horas-jogadas">
+      <h2>Suas características:</h2>
+      <table id="horas-tabela">
+        <thead>
+          <tr>
+            <th></th>
+            <th>Gênero</th>
+            <th>Horas Jogadas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <img
+                src="./imagens/WhatsApp Image 2024-11-24 at 21.23.23 (1).jpeg"
+                alt="Imagem do Jogo"
+              />
+            </td>
+            <td>Aventura</td>
+            <td id="horas-aventura">0</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="./imagens/WhatsApp Image 2024-11-24 at 21.23.23.jpeg"
+                alt="Imagem do Jogo"
+              />
+            </td>
+            <td>Esportes</td>
+            <td id="horas-esportes">0</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="./imagens/WhatsApp Image 2024-11-24 at 20.52.17 (1).jpeg"
+                alt="Imagem do Jogo"
+              />
+            </td>
+            <td>Quebra-cabeça</td>
+            <td id="horas-quebra-cabeça">0</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="./imagens/WhatsApp Image 2024-11-24 at 20.52.17 (3).jpeg"
+                alt="Imagem do Jogo"
+              />
+            </td>
+            <td>RPG</td>
+            <td id="horas-rpg">0</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="./imagens/WhatsApp Image 2024-11-24 at 20.52.17 (2).jpeg"
+                alt="Imagem do Jogo"
+              />
+            </td>
+            <td>Casual</td>
+            <td id="horas-casual">0</td>
+          </tr>
+          <tr>
+            <td>
+              <img
+                src="./imagens/WhatsApp Image 2024-11-24 at 20.52.17.jpeg"
+                alt="Imagem do Jogo"
+              />
+            </td>
+            <td>Ação</td>
+            <td id="horas-acao">0</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <section class="registro">
+      <form id="formulario">
+        <h2>Registre um jogo:</h2>
+        <label for="nome">Nome do Jogo:</label>
+        <input type="text" id="nome" name="nome" required />
+
+        <label for="genero">Gênero:</label>
+        <select id="genero" name="genero" required>
+          <option value="aventura">Aventura</option>
+          <option value="quebra-cabeça">Quebra-cabeça</option>
+          <option value="esportes">Esportes</option>
+          <option value="rpg">RPG</option>
+          <option value="casual">Casual</option>
+          <option value="acao">Ação</option>
+        </select>
+
+        <label for="horas-jogadas">Horas Jogadas:</label>
+        <input type="number" id="horas-jogadas" name="horas" required />
+
+        <button type="submit">Registrar</button>
+      </form>
+    </section>
+
+    <section class="jogos-registrados">
+      <h2>Jogos Registrados:</h2>
+      <table id="jogos-tabela">
+        <thead>
+          <tr>
+            <th>Nome do Jogo</th>
+            <th>Gênero</th>
+            <th>Horas Jogadas</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td data-label="Nome do Jogo"></td>
+            <td data-label="Gênero"></td>
+            <td data-label="Horas Jogadas"></td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
+
+    <div class="feedback">
+      <h2>Deixe seu Feedback</h2>
+
+      <div class="feedback-form">
+        <ul>
+          <li>
+            <label for="pergunta1">Como você avalia o design do site?</label>
+            <div class="estrelas" id="pergunta1">
+              <span class="estrela" data-value="1">☆</span>
+              <span class="estrela" data-value="2">☆</span>
+              <span class="estrela" data-value="3">☆</span>
+              <span class="estrela" data-value="4">☆</span>
+              <span class="estrela" data-value="5">☆</span>
+            </div>
+          </li>
+          <li>
+            <label for="pergunta2">A navegação é fácil e intuitiva?</label>
+            <div class="estrelas" id="pergunta2">
+              <span class="estrela" data-value="1">☆</span>
+              <span class="estrela" data-value="2">☆</span>
+              <span class="estrela" data-value="3">☆</span>
+              <span class="estrela" data-value="4">☆</span>
+              <span class="estrela" data-value="5">☆</span>
+            </div>
+          </li>
+          <li>
+            <label for="pergunta3"
+              >Você recomendaria este site para outras pessoas?</label
+            >
+            <div class="estrelas" id="pergunta3">
+              <span class="estrela" data-value="1">☆</span>
+              <span class="estrela" data-value="2">☆</span>
+              <span class="estrela" data-value="3">☆</span>
+              <span class="estrela" data-value="4">☆</span>
+              <span class="estrela" data-value="5">☆</span>
+            </div>
+          </li>
+        </ul>
+
+        <button id="enviar-feedback">Enviar Feedback</button>
+      </div>
+      <div id="resultado-feedback" class="resultado-feedback"></div>
+    </div>
+
+    <footer class="rodape">
+      <div class="container">
+        <p>&copy; 2024 Playstation Tracker. Todos os direitos reservados.</p>
+        <div class="redes-sociais">
+          <a
+            href="https://github.com/brendowdev"
+            target="_blank"
+            class="icone-github"
+            title="GitHub"
+          >
+            <img src="./imagens/github-logo.png" alt="Facebook" />
+          </a>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
